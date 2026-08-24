@@ -24,14 +24,14 @@ pip install -r requirements.txt
 ---
 
 ## 2. Configure Environment (`.env`)
-Ensure your `.env` file exists in the root directory with your DB credentials and API keys:
+Create a `.env` file in the root directory with your DB credentials and API keys:
 
 ```env
-API_TOKEN=my_secret_123
-DMI_API_TOKEN=my_secret_123
-BLUEDART_API_TOKEN=my_secret_123
-LT_API_TOKEN=my_secret_123
-NPCI_API_TOKEN=my_secret_123
+API_TOKEN=your_secret_api_token_here
+DMI_API_TOKEN=your_secret_api_token_here
+BLUEDART_API_TOKEN=your_secret_api_token_here
+LT_API_TOKEN=your_secret_api_token_here
+NPCI_API_TOKEN=your_secret_api_token_here
 ```
 
 ---
@@ -52,8 +52,8 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ## 4. Accessing the API & Documentation
 
 - **Base URL**: `http://localhost:8000`
-- **Swagger Documentation**: `http://localhost:8000/docs?api_key=my_secret_123`
-- **API Key Header for Requests**: `X-API-Key: my_secret_123`
+- **Swagger Documentation**: `http://localhost:8000/docs?api_key=<YOUR_API_TOKEN>`
+- **API Key Header for Requests**: `X-API-Key: <YOUR_API_TOKEN>`
 
 ---
 
@@ -63,7 +63,7 @@ Run batch analysis via API or direct script:
 
 ```bash
 # Example API Call
-curl -X POST "http://localhost:8000/dmi/start-daily-analysis" -H "X-API-Key: my_secret_123"
+curl -X POST "http://localhost:8000/dmi/start-daily-analysis" -H "X-API-Key: <YOUR_API_TOKEN>"
 
 # Or run module scripts directly
 python dmi/run_daily_batch.py
