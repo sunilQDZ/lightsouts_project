@@ -1,0 +1,42 @@
+# Environment and Secrets
+.env
+*.env
+.env.*
+
+# Python Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python Cache and Compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Application Log Files
+*.log
+*_app.log
+
+# Inference Cache Files
+*_inference_cache.json
+inference_cache.json
+
+# Export & Generated Files
+*.csv
+*.xlsx
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Temporary Scratch Directory
+scratch/
